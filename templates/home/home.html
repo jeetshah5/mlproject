@@ -129,15 +129,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 5vh 0;
 }
 
 .login {
-    width: 400px;
+    width: 90vw;
     padding: 20px;
-    background: #bebebe;
+    background: #e4e4e4;
+    box-shadow: 1px 1px 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -174,10 +174,13 @@ form {
     background-color: #3498db;
     color: #fff;
     cursor: pointer;
+    border: 1px solid #3498db;
 }
 
 .btn:hover {
-    background-color: #2980b9;
+    color: #2980b9;
+    background-color: white;
+    border: 1px solid black;
 }
 
     </style>
@@ -185,12 +188,10 @@ form {
 
 <body>
     <div class="login">
-        <h1>Student Exam Performance Indicator</h1>
-
         <form action="{{ url_for('predict_datapoint')}}" method="post">
-            <h1>
+            <h2>
                 <legend>Student Exam Performance Prediction</legend>
-            </h1>
+            </h2>
             <div class="mb-3">
                 <label class="form-label">Gender</label>
                 <select class="form-control" name="gender" placeholder="Enter your Gender" required>
@@ -251,7 +252,7 @@ form {
             </div>
         </form>
         <h2>
-            THE prediction is {{results}}
+            The Prediction is {{results}}
         </h2>
     </div>
 </body>
